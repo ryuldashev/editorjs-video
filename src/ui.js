@@ -24,7 +24,7 @@ export default class Ui {
       videoContainer: make("div", [this.CSS.videoContainer]),
       fileButton: this.createFileButton(),
       videoEl: undefined,
-      videoPreloader: make("video", this.CSS.videoPreloader),
+      videoPreloader: make("div", this.CSS.videoPreloader),
       caption: make("div", [this.CSS.input, this.CSS.caption], {
         contentEditable: !this.readOnly,
       }),
@@ -128,7 +128,7 @@ export default class Ui {
    * @returns {void}
    */
   showPreloader(src) {
-    this.nodes.videoPreloader.src = `url(${src})`;
+    // this.nodes.videoPreloader.src = `url(${src})`;
 
     this.toggleStatus(Ui.status.UPLOADING);
   }
@@ -139,7 +139,7 @@ export default class Ui {
    * @returns {void}
    */
   hidePreloader() {
-    this.nodes.videoPreloader.src = "";
+    // this.nodes.videoPreloader.src = "";
     this.toggleStatus(Ui.status.EMPTY);
   }
 
