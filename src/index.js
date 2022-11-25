@@ -127,6 +127,7 @@ export default class VideoTool {
         controls: config.player.controls || false,
         light: config.player.light || false,
         playing: config.player.playing || false,
+        ...config.player,
       },
     };
 
